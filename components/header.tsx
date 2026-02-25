@@ -6,46 +6,9 @@ import {
   ChevronDown,
   Menu,
   X,
-  CreditCard,
-  Briefcase,
-  Landmark,
-  ShoppingBag,
-  RefreshCw,
-  Car,
 } from "lucide-react"
+import { products } from "@/data/products"
 
-const products = [
-  {
-    title: "Crédito do Trabalhador CLT",
-    description: "Soluções de crédito exclusivas para profissionais do setor privado",
-    icon: Briefcase,
-  },
-  {
-    title: "Empréstimo Consignado",
-    description: "As melhores taxas com desconto direto na folha de pagamento",
-    icon: Landmark,
-  },
-  {
-    title: "Cartão Consignado",
-    description: "Cartão de crédito com taxas reduzidas para beneficiários e servidores",
-    icon: CreditCard,
-  },
-  {
-    title: "Cartão Benefício",
-    description: "Vantagens e descontos exclusivos em farmácias e serviços",
-    icon: ShoppingBag,
-  },
-  {
-    title: "Portabilidade com Refinanciamento",
-    description: "Traga sua dívida e saia com dinheiro extra no bolso",
-    icon: RefreshCw,
-  },
-  {
-    title: "Empréstimo com Garantia do Veículo",
-    description: "Use seu carro para conseguir as menores taxas do mercado",
-    icon: Car,
-  },
-]
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -65,7 +28,7 @@ export default function Header() {
 
         <nav className="hidden items-center gap-8 lg:flex">
           <Link
-            href="#o-grupo"
+            href="/#o-grupo"
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             O Grupo
@@ -92,24 +55,24 @@ export default function Header() {
                     </p>
                     <div className="grid grid-cols-4 min-h-96 gap-3">
                       {products.map((product) => (
-                        <Link
-                          key={product.title}
-                          href="#"
-                          className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
-                        >
-                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
-                            <product.icon className="h-4 w-4 text-primary" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-foreground">
-                              {product.title}
-                            </p>
-                            <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
-                              {product.description}
-                            </p>
-                          </div>
-                        </Link>
-                      ))}
+                      <Link
+                        key={product.title}
+                        href={`/produtos/${product.slug}`}
+                        className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
+                      >
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
+                          <product.icon className="h-4 w-4 text-primary" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground">
+                            {product.title}
+                          </p>
+                          <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
+                            {product.menuDescription}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
                     </div>
                   </div>
                 </div>
@@ -118,13 +81,13 @@ export default function Header() {
           </div>
 
           <Link
-            href="#ecossistema"
+            href="/#ecossistema"
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Ecossistema
           </Link>
           <Link
-            href="#vagas"
+            href="/#vagas"
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Vagas
