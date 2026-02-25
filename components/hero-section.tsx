@@ -38,7 +38,7 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white text-balance md:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white text-balance md:text-5xl">
             Tecnologia que impulsiona o credito.{" "}
             <span className="text-white/70">
               Solidez que constroi o futuro.

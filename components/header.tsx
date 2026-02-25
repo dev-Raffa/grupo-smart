@@ -87,12 +87,12 @@ export default function Header() {
             </button>
 
             {productsOpen && (
-              <div className="absolute left-1/2 top-full pt-4 -translate-x-1/2">
-                <div className="w-[600px] rounded-lg border border-border bg-background/95 p-6 shadow-xl backdrop-blur-xl">
+              <div className="absolute left-3.5 top-full pt-4 -translate-x-1/2">
+                <div className="w-[calc(100dvw-14px)] rounded-lg border border-border bg-background/95 p-6 shadow-xl backdrop-blur-xl">
                   <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Nossos Produtos
                   </p>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-4 min-h-96 gap-3">
                     {products.map((product) => (
                       <Link
                         key={product.title}
