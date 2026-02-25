@@ -134,9 +134,12 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4">
+          <button className=" hidden lg:flex rounded-md bg-primary cursor-pointer px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+            Fale Conosco
+          </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-foreground lg:hidden"
+            className="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-md text-foreground lg:hidden"
             aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
