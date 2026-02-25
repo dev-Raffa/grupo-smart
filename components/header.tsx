@@ -7,43 +7,43 @@ import {
   Menu,
   X,
   CreditCard,
-  Building2,
-  Users,
-  Shield,
-  BarChart3,
-  Wallet,
+  Briefcase,
+  Landmark,
+  ShoppingBag,
+  RefreshCw,
+  Car,
 } from "lucide-react"
 
 const products = [
   {
-    title: "Credito Consignado",
-    description: "Solucoes completas de credito consignado para servidores publicos",
+    title: "Crédito do Trabalhador CLT",
+    description: "Soluções de crédito exclusivas para profissionais do setor privado",
+    icon: Briefcase,
+  },
+  {
+    title: "Empréstimo Consignado",
+    description: "As melhores taxas com desconto direto na folha de pagamento",
+    icon: Landmark,
+  },
+  {
+    title: "Cartão Consignado",
+    description: "Cartão de crédito com taxas reduzidas para beneficiários e servidores",
     icon: CreditCard,
   },
   {
-    title: "Credito Empresarial",
-    description: "Linhas de credito para empresas de todos os portes",
-    icon: Building2,
+    title: "Cartão Benefício",
+    description: "Vantagens e descontos exclusivos em farmácias e serviços",
+    icon: ShoppingBag,
   },
   {
-    title: "Consignado Privado",
-    description: "Credito consignado para colaboradores do setor privado",
-    icon: Users,
+    title: "Portabilidade com Refinanciamento",
+    description: "Traga sua dívida e saia com dinheiro extra no bolso",
+    icon: RefreshCw,
   },
   {
-    title: "Seguros",
-    description: "Protecao completa para voce e sua familia",
-    icon: Shield,
-  },
-  {
-    title: "Investimentos",
-    description: "Opcoes de investimento com rentabilidade competitiva",
-    icon: BarChart3,
-  },
-  {
-    title: "Conta Digital",
-    description: "Sua conta digital completa e sem tarifas escondidas",
-    icon: Wallet,
+    title: "Empréstimo com Garantia do Veículo",
+    description: "Use seu carro para conseguir as menores taxas do mercado",
+    icon: Car,
   },
 ]
 
@@ -54,7 +54,6 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-primary">
             <span className="text-sm font-bold text-primary-foreground">S</span>
@@ -64,7 +63,6 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 lg:flex">
           <Link
             href="#o-grupo"
@@ -73,7 +71,6 @@ export default function Header() {
             O Grupo
           </Link>
 
-          {/* Products Mega Menu */}
           <div
             className="relative"
             onMouseEnter={() => setProductsOpen(true)}
@@ -134,7 +131,6 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Mobile Toggle */}
         <div className="flex items-center gap-4">
           <button className=" hidden lg:flex rounded-md bg-primary cursor-pointer px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
             Fale Conosco
@@ -149,7 +145,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <div className="mx-auto max-w-7xl px-6 py-6">
