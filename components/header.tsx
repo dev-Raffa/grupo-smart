@@ -55,24 +55,24 @@ export default function Header() {
                     </p>
                     <div className="grid grid-cols-4 min-h-96 gap-3">
                       {products.map((product) => (
-                      <Link
-                        key={product.title}
-                        href={`/produtos/${product.slug}`}
-                        className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
-                      >
-                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
-                          <product.icon className="h-4 w-4 text-primary" />
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-foreground">
-                            {product.title}
-                          </p>
-                          <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
-                            {product.menuDescription}
-                          </p>
-                        </div>
-                      </Link>
-                    ))}
+                        <Link
+                          key={product.title}
+                          href={`/produtos/${product.slug}`}
+                          className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
+                        >
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
+                            <product.icon className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold text-foreground">
+                              {product.title}
+                            </p>
+                            <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
+                              {product.menuDescription}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function Header() {
                   {products.map((product) => (
                     <Link
                       key={product.title}
-                      href="#"
+                      href={`/produtos/${product.slug}`}
                       className="flex items-center gap-3 rounded-md p-2 transition-colors hover:bg-muted"
                       onClick={() => setMobileOpen(false)}
                     >
