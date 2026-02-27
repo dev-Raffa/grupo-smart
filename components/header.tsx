@@ -82,21 +82,21 @@ export default function Header() {
                         Para sua empresa
                       </p>
                       <div className="grid grid-cols-1 max-w-xl min-h-96 gap-3">
-                        {businessSolutions.map((product) => (
+                        {businessSolutions.map((solution) => (
                           <Link
-                            key={product.title}
-                            href={`#`}
+                            key={solution.title}
+                            href={solution.hreef}
                             className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
                           >
                             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
-                              <product.icon className="h-4 w-4 text-primary" />
+                              <solution.icon className="h-4 w-4 text-primary" />
                             </div>
                             <div>
                               <p className="text-sm font-semibold text-foreground">
-                                {product.title}
+                                {solution.title}
                               </p>
                               <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
-                                {product.description}
+                                {solution.description}
                               </p>
                             </div>
                           </Link>
@@ -150,7 +150,7 @@ export default function Header() {
               </Link>
               <div>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                  Produtos
+                  Para você
                 </p>
                 <div className="grid grid-cols-1 gap-2">
                   {products.map((product) => (
@@ -163,6 +163,26 @@ export default function Header() {
                       <product.icon className="h-4 w-4 text-primary" />
                       <span className="text-sm font-medium text-foreground">
                         {product.title}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                  Para sua empresa
+                </p>
+                <div className="grid grid-cols-1 gap-2">
+                  {businessSolutions.map((solution) => (
+                    <Link
+                      key={solution.title}
+                      href={solution.hreef}
+                      className="flex items-center gap-3 rounded-md p-2 transition-colors hover:bg-muted"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      <solution.icon className="h-4 w-4 text-primary" />
+                      <span className="text-sm font-medium text-foreground">
+                        {solution.title}
                       </span>
                     </Link>
                   ))}
