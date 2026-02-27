@@ -8,7 +8,7 @@ const ecosystem = [
     icon: Cpu,
   },
   {
-    name: "Smart Tech",
+    name: "Smart Tech Innovation",
     description:
       "Braco tecnologico do grupo, responsavel por infraestrutura, APIs e inteligencia de dados para o ecossistema financeiro.",
     icon: Lightbulb,

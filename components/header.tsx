@@ -8,6 +8,7 @@ import {
   X,
 } from "lucide-react"
 import { products } from "@/data/products"
+import { businessSolutions } from "@/data/solutions"
 
 
 export default function Header() {
@@ -48,31 +49,59 @@ export default function Header() {
 
             {productsOpen && (
               <div className="absolute left-[92%] top-full pt-4 -translate-x-1/2">
-                <div className="w-[calc(100dvw-14px)] rounded-lg flex justify-center border border-border bg-background/95 p-6 shadow-xl backdrop-blur-xl">
-                  <div className="max-w-7xl px-6 lg:px-8">
-                    <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                      Nossos Produtos
-                    </p>
-                    <div className="grid grid-cols-4 min-h-96 gap-3">
-                      {products.map((product) => (
-                        <Link
-                          key={product.title}
-                          href={`/produtos/${product.slug}`}
-                          className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
-                        >
-                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
-                            <product.icon className="h-4 w-4 text-primary" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-foreground">
-                              {product.title}
-                            </p>
-                            <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
-                              {product.menuDescription}
-                            </p>
-                          </div>
-                        </Link>
-                      ))}
+                <div className="w-[calc(100dvw-14px)] rounded-b-lg flex justify-center border-b border-border bg-background/95 p-6 shadow-xl backdrop-blur-xl">
+                  <div className="max-w-7xl px-6 flex lg:px-8">
+                    <div>
+                      <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                        Para você
+                      </p>
+                      <div className="grid grid-cols-3 min-h-96 gap-3">
+                        {products.map((product) => (
+                          <Link
+                            key={product.title}
+                            href={`/produtos/${product.slug}`}
+                            className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
+                          >
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
+                              <product.icon className="h-4 w-4 text-primary" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-foreground">
+                                {product.title}
+                              </p>
+                              <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
+                                {product.menuDescription}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div >
+                      <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                        Para sua empresa
+                      </p>
+                      <div className="grid grid-cols-1 max-w-xl min-h-96 gap-3">
+                        {businessSolutions.map((product) => (
+                          <Link
+                            key={product.title}
+                            href={`#`}
+                            className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
+                          >
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
+                              <product.icon className="h-4 w-4 text-primary" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-foreground">
+                                {product.title}
+                              </p>
+                              <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
+                                {product.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
