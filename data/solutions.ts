@@ -18,6 +18,6 @@ export const businessSolutions: SolutionFeature[] = [
     title: "Smart Desenvolve",
     description: "Um ecossistema de parceria focado no seu crescimento. Tenha acesso a treinamentos, acompanhamento estratégico e às melhores bases e processos do mercado. Sem custos de adesão.",
     icon: Handshake,
-    hreef: "/#"
+    hreef: "/smart-desenvolve"
   },
 ]

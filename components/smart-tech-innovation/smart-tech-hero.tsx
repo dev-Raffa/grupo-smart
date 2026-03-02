@@ -29,8 +29,8 @@ export default function SmartTechHero() {
       {/* Accent glow */}
       <div className="absolute right-0 top-1/3 h-[500px] w-[500px] rounded-full bg-[#E0123B]/5 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
-        <div className="">
+      <div className="relative mx-auto text-center max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
+        <div className="flex flex-col items-center text-center">
           {/* Badge */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#2a2a2a] px-4 py-1.5">
             <div className="flex h-5 w-5 items-center justify-center rounded-sm bg-[#E0123B]">
@@ -41,12 +41,12 @@ export default function SmartTechHero() {
             </span>
           </div>
 
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white text-balance md:text-5xl lg:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white text-balance md:text-5xl lg:text-[3.5rem]">
             A Inteligencia que impulsiona o{" "}
             <span className="text-[#E0123B]">Ecossistema Smart.</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#a1a1a1] md:text-lg">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#a1a1a1] md:text-lg">
             Conheca o braco de inovacao responsavel por desenvolver a
             infraestrutura tecnologica proprietaria que sustenta as operacoes do
             Grupo SmartConsig.
