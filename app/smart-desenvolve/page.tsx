@@ -8,6 +8,7 @@ import SDChallenges from "@/components/smart-desenvolve/sd-challenges"
 import SDProgram from "@/components/smart-desenvolve/sd-program"
 import SDGovernance from "@/components/smart-desenvolve/sd-governance"
 import SDDifferentials from "@/components/smart-desenvolve/sd-differentials"
+import CareersSection from "@/components/careers-section"
 
 export const metadata: Metadata = {
   title: "Smart Desenvolve | O Acelerador de Resultados do Ecossistema Smart",
@@ -27,6 +28,7 @@ export default function SmartDesenvolvePage() {
         <SDProgram />
         <SDGovernance />
         <SDDifferentials />
+        <CareersSection />
       </main>
       <Footer />
     </>

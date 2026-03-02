@@ -5,7 +5,7 @@ const steps = [
     icon: Code2,
     label: "Smart Tech",
     role: "Desenvolvimento",
-    color: "#E0123B",
+    color: "#000000",
   },
   {
     icon: CreditCard,

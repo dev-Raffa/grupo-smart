@@ -21,7 +21,7 @@ const differentials = [
 
 export default function SDDifferentials() {
   return (
-    <section className="bg-background py-24 lg:py-32">
+    <section className="bg-muted py-24 lg:py-32">
       <div className="fkex flex-col items-center mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#E0123B]">
