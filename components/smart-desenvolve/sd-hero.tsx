@@ -1,21 +1,26 @@
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function SDHero() {
   return (
-    <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-muted pt-16">
-      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
+    <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-foreground pt-16">
+      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <div className="flex flex-col items-center text-center">
-          {/* Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border px-5 py-2">
-            <span className="h-2 w-2 rounded-full bg-primary" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-              Ecossistema SmartConsig
-            </span>
-          </div>
+          <figure className="h-52 overflow-hidden">
+            <Image
+              src="/images/Logo Smart Desenvolve.png"
+              alt="Sede corporativa SmartConsig"
+              width={300}
+              height={200}
+              className="object-fill"
+              priority
+            />
+          </figure>
 
-          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-foreground text-balance md:text-5xl lg:text-[3.5rem]">
-            Smart Desenvolve: O Acelerador de Resultados do Ecossistema Smart.
+          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-muted text-balance md:text-5xl lg:text-[3.5rem]">
+            O Acelerador de Resultados do{" "}
+            <span className="text-[#E0123B]">Ecossistema Smart.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">

@@ -23,17 +23,17 @@ const ecosystem = [
 
 export default function EcosystemSection() {
   return (
-    <section id="ecossistema" className="bg-background py-24 lg:py-32">
+    <section id="ecossistema" className="bg-primary py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+          <p className="text-xs font-semibold uppercase tracking-widest text-black">
             Ecossistema
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground text-balance md:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white text-balance md:text-4xl">
             Tres pilares. Uma visao integrada.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          <p className="mt-4 text-base leading-relaxed text-white/80">
             Nosso ecossistema conecta tecnologia, credito e inovacao para oferecer
             solucoes completas ao mercado financeiro.
           </p>
@@ -44,7 +44,7 @@ export default function EcosystemSection() {
           {ecosystem.map((item) => (
             <div
               key={item.name}
-              className="group relative rounded-xl border border-border bg-background p-8 transition-all hover:border-primary/20 hover:shadow-lg"
+              className="group relative rounded-xl border border-border bg-muted/90 p-8 transition-all hover:border-primary/20 hover:shadow-lg"
             >
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg border border-border transition-colors group-hover:border-primary/30">
                 <item.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />

@@ -69,9 +69,9 @@ export default function HeroSection() {
 
         {/* Right Image */}
         <div className="relative hidden flex-1 lg:block">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+          <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
             <Image
-              src="/images/hero-corporate.jpg"
+              src="/images/Faixada Smart Consig.png"
               alt="Sede corporativa SmartConsig"
               fill
               className="object-cover"

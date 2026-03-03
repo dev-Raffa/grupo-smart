@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function SmartTechHero() {
@@ -29,17 +30,18 @@ export default function SmartTechHero() {
       {/* Accent glow */}
       <div className="absolute right-0 top-1/3 h-[500px] w-[500px] rounded-full bg-[#E0123B]/5 blur-[120px]" />
 
-      <div className="relative mx-auto text-center max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
+      <div className="relative mx-auto text-center max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <div className="flex flex-col items-center text-center">
-          {/* Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#2a2a2a] px-4 py-1.5">
-            <div className="flex h-5 w-5 items-center justify-center rounded-sm bg-[#E0123B]">
-              <span className="text-[9px] font-bold text-white">ST</span>
-            </div>
-            <span className="text-xs font-medium text-[#a1a1a1]">
-              Uma empresa do Grupo SmartConsig
-            </span>
-          </div>
+          <figure>
+            <Image
+              src="/images/logo_black-removebg-preview.png"
+              alt="Sede corporativa SmartConsig"
+              width={300}
+              height={200}
+              className="object-fill"
+              priority
+            />
+          </figure>
 
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white text-balance md:text-5xl lg:text-[3.5rem]">
             A Inteligencia que impulsiona o{" "}

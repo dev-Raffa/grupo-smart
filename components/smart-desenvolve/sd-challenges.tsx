@@ -23,17 +23,17 @@ const challenges = [
 
 export default function SDChallenges() {
   return (
-    <section className="bg-muted/50 py-24 lg:py-32">
+    <section className="bg-primary py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#E0123B]">
+          <p className="text-xs font-semibold uppercase tracking-widest text-foreground">
             O Desafio do Mercado
           </p>
-          <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-foreground text-balance md:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-muted text-balance md:text-4xl">
             As barreiras para escalar uma operacao de vendas
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          <p className="mt-4 text-base leading-relaxed text-muted/80">
             Identificamos os principais obstaculos que impedem os Corbans de
             alcancar o proximo nivel de resultados.
           </p>
@@ -44,7 +44,7 @@ export default function SDChallenges() {
           {challenges.map((item) => (
             <div
               key={item.title}
-              className="rounded-xl border border-border bg-background p-8 transition-shadow hover:shadow-md"
+              className="rounded-xl border border-border bg-muted/80 p-8 transition-shadow hover:shadow-md hover:bg-muted"
             >
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#E0123B]/10">
                 <item.icon className="h-5 w-5 text-[#E0123B]" strokeWidth={1.5} />

@@ -23,17 +23,17 @@ const pillars = [
 
 export default function SmartTechSecurity() {
   return (
-    <section className="bg-background py-20 lg:py-28">
+    <section className="bg-primary py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="mb-16 text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#E0123B]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-black">
             Infraestrutura
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
             Seguranca e Integridade
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/80">
             Protecao em cada camada para que o ecossistema Smart opere com
             confiabilidade e conformidade total.
           </p>
