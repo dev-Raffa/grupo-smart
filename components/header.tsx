@@ -15,7 +15,7 @@ import Image from "next/image"
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [productsOpen, setProductsOpen] = useState(true)
+  const [productsOpen, setProductsOpen] = useState(false)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
@@ -35,7 +35,7 @@ export default function Header() {
           <div
             className="relative"
             onMouseEnter={() => setProductsOpen(true)}
-            onMouseLeave={() => setProductsOpen(true)}
+            onMouseLeave={() => setProductsOpen(false)}
           >
             <button className="flex items-center gap-1 text-sm font-medium text-foreground transition-colors hover:text-primary">
               Produtos
