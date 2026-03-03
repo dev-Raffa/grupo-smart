@@ -9,22 +9,19 @@ import {
 } from "lucide-react"
 import { products } from "@/data/products"
 import { businessSolutions } from "@/data/solutions"
+import Logo from "../public/images/Logo Horizontal - Vermelha.png"
+import Image from "next/image"
 
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [productsOpen, setProductsOpen] = useState(false)
+  const [productsOpen, setProductsOpen] = useState(true)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-primary">
-            <span className="text-sm font-bold text-primary-foreground">S</span>
-          </div>
-          <span className="text-lg font-bold tracking-tight text-foreground">
-            Smart<span className="text-primary">Consig</span>
-          </span>
+          <Image src={Logo} alt="Logo" width={120} height={120} />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -38,7 +35,7 @@ export default function Header() {
           <div
             className="relative"
             onMouseEnter={() => setProductsOpen(true)}
-            onMouseLeave={() => setProductsOpen(false)}
+            onMouseLeave={() => setProductsOpen(true)}
           >
             <button className="flex items-center gap-1 text-sm font-medium text-foreground transition-colors hover:text-primary">
               Produtos
@@ -48,19 +45,19 @@ export default function Header() {
             </button>
 
             {productsOpen && (
-              <div className="absolute left-[92%] top-full pt-4 -translate-x-1/2">
+              <div className="absolute left-[116%] top-full pt-4 -translate-x-1/2">
                 <div className="w-[calc(100dvw-14px)] rounded-b-lg flex justify-center border-b border-border bg-background/95 p-6 shadow-xl backdrop-blur-xl">
-                  <div className="max-w-7xl px-6 flex lg:px-8">
-                    <div>
+                  <div className="max-w-7xl px-6 gap-24 flex justify-between lg:px-8">
+                    <div className="py-4">
                       <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                         Para você
                       </p>
-                      <div className="grid grid-cols-3 min-h-96 gap-3">
+                      <div className="grid grid-cols-2 max-w-3xl min-h-96 p-3 gap-3">
                         {products.map((product) => (
                           <Link
                             key={product.title}
                             href={`/produtos/${product.slug}`}
-                            className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
+                            className="group flex items-start gap-3 p-3 rounded-md transition-colors hover:bg-muted"
                           >
                             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
                               <product.icon className="h-4 w-4 text-primary" />
@@ -77,25 +74,25 @@ export default function Header() {
                         ))}
                       </div>
                     </div>
-                    <div >
-                      <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                        Para sua empresa
+                    <div className="bg-muted rounded-2xl px-4 py-4">
+                      <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">
+                        Grupo Smart Consig
                       </p>
-                      <div className="grid grid-cols-1 max-w-xl min-h-96 gap-3">
+                      <div className="flex flex-col gap-5 max-w-xl pe-4">
                         {businessSolutions.map((solution) => (
                           <Link
                             key={solution.title}
                             href={solution.hreef}
-                            className="group flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-muted"
+                            className="group w-md flex items-start gap-3 rounded-md p-3 transition-colors hover:bg-primary "
                           >
-                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-primary/30">
-                              <solution.icon className="h-4 w-4 text-primary" />
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border transition-colors group-hover:border-white">
+                              <solution.icon className="h-4 w-4 text-primary group-hover:text-white" />
                             </div>
                             <div>
-                              <p className="text-sm font-semibold text-foreground">
+                              <p className="text-sm font-semibold text-foreground group-hover:text-white">
                                 {solution.title}
                               </p>
-                              <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
+                              <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed group-hover:text-white">
                                 {solution.description}
                               </p>
                             </div>
